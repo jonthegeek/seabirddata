@@ -10,3 +10,5 @@
 ^pkgdown$
 ^[.]?air[.]toml$
 ^\.vscode$
+^data-raw$
+^AGENTS\.md$
