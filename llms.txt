@@ -1,0 +1,27 @@
+# seabirddata
+
+The goal of seabirddata is to…
+
+## Installation
+
+You can install the development version of seabirddata from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("jonthegeek/seabirddata")
+```
+
+## Usage
+
+Add usage information and examples here.
+
+## Code of Conduct
+
+Please note that the seabirddata project is released with a [Contributor
+Code of
+Conduct](https://jonthegeek.github.io/seabirddata/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
+
+# 
+
