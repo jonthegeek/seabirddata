@@ -1,11 +1,15 @@
 Package: seabirddata
-Title: What the Package Does
+Title: Data of At-Sea Observations of Seabirds
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: c(
     person("Jon", "Harmon", , "jonthegeek@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0003-4781-4346"))
-Description: The goal of seabirddata is to...
-License: MIT + file LICENSE
+           comment = c(ORCID = "0000-0003-4781-4346")),
+    person("Museum of New Zealand Te Papa Tongarewa", role = "cph",
+           comment = "This package uses data sourced from Te Papa and licensed by Te Papa for re-use under the Creative Commons BY 4.0 International licence")
+  )
+Description: This is a dataset of at-sea observations of seabirds dating
+    from 1969 to 1990.
+License: CC BY 4.0
 URL: https://github.com/jonthegeek/seabirddata,
     https://jonthegeek.github.io/seabirddata/
 BugReports: https://github.com/jonthegeek/seabirddata/issues
