@@ -4,9 +4,9 @@
 \name{seabirddata-package}
 \alias{seabirddata}
 \alias{seabirddata-package}
-\title{seabirddata: What the Package Does}
+\title{seabirddata: Data of At-Sea Observations of Seabirds}
 \description{
-The goal of seabirddata is to...
+This is a dataset of at-sea observations of seabirds dating from 1969 to 1990.
 }
 \seealso{
 Useful links:
@@ -19,6 +19,11 @@ Useful links:
 }
 \author{
 \strong{Maintainer}: Jon Harmon \email{jonthegeek@gmail.com} (\href{https://orcid.org/0000-0003-4781-4346}{ORCID})
+
+Other contributors:
+\itemize{
+  \item Museum of New Zealand Te Papa Tongarewa (This package uses data sourced from Te Papa and licensed by Te Papa for re-use under the Creative Commons BY 4.0 International licence) [copyright holder]
+}
 
 }
 \keyword{internal}
