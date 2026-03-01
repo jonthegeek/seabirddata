@@ -13,10 +13,24 @@ License: CC BY 4.0
 URL: https://github.com/jonthegeek/seabirddata,
     https://jonthegeek.github.io/seabirddata/
 BugReports: https://github.com/jonthegeek/seabirddata/issues
+Depends: 
+    R (>= 4.1.0)
+Imports: 
+    rlang
 Suggests: 
-    testthat (>= 3.0.0)
+    dplyr,
+    knitr,
+    pkgload,
+    purrr,
+    stringr,
+    testthat (>= 3.0.0),
+    tibble,
+    usethis,
+    vctrs,
+    withr
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
+LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
