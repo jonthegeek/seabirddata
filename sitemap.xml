@@ -1,13 +1,27 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>https://jonthegeek.github.io/seabirddata/404.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/AGENTS.html</loc></url>
 <url><loc>https://jonthegeek.github.io/seabirddata/CODE_OF_CONDUCT.html</loc></url>
 <url><loc>https://jonthegeek.github.io/seabirddata/CONTRIBUTING.html</loc></url>
-<url><loc>https://jonthegeek.github.io/seabirddata/LICENSE-text.html</loc></url>
 <url><loc>https://jonthegeek.github.io/seabirddata/LICENSE.html</loc></url>
 <url><loc>https://jonthegeek.github.io/seabirddata/SUPPORT.html</loc></url>
 <url><loc>https://jonthegeek.github.io/seabirddata/authors.html</loc></url>
 <url><loc>https://jonthegeek.github.io/seabirddata/index.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/beaufort_scale.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/beaufort_scale_dictionary.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/birds.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/birds_dictionary.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/dot-class_friendly.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/dot-create_dataset_dictionary.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/dot-describe_dataset.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/dot-str_to_sentence_full.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/dot-write_dataset_dictionary.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/dot-write_file_lines.html</loc></url>
 <url><loc>https://jonthegeek.github.io/seabirddata/reference/index.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/sea_states.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/sea_states_dictionary.html</loc></url>
 <url><loc>https://jonthegeek.github.io/seabirddata/reference/seabirddata-package.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/ships.html</loc></url>
+<url><loc>https://jonthegeek.github.io/seabirddata/reference/ships_dictionary.html</loc></url>
 </urlset>
 
