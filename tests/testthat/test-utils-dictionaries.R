@@ -1,19 +1,23 @@
 # .class_friendly() ----------------------------------------------------------
 
 test_that(".class_friendly returns a single character string", {
+  skip_if_not_installed("vctrs")
   expect_type(.class_friendly(1L), "character")
   expect_length(.class_friendly(1L), 1L)
 })
 
 test_that(".class_friendly returns 'factor' for unordered factors", {
+  skip_if_not_installed("vctrs")
   expect_equal(.class_friendly(factor(letters)), "factor")
 })
 
 test_that(".class_friendly returns 'ordered' for ordered factors", {
+  skip_if_not_installed("vctrs")
   expect_equal(.class_friendly(factor(letters, ordered = TRUE)), "ordered")
 })
 
 test_that(".class_friendly normalises 'hms' to 'time'", {
+  skip_if_not_installed("vctrs")
   # vctrs returns "hms" when the hms package is loaded; we normalise to "time"
   # so the label is consistent regardless of the environment.
   local_mocked_bindings(
@@ -24,6 +28,7 @@ test_that(".class_friendly normalises 'hms' to 'time'", {
 })
 
 test_that(".class_friendly strips angle-bracket suffix regardless of levels", {
+  skip_if_not_installed("vctrs")
   # Two factors with different level sets produce different hashes but the
   # same label.
   expect_equal(
@@ -35,18 +40,22 @@ test_that(".class_friendly strips angle-bracket suffix regardless of levels", {
 # .str_to_sentence_full() -----------------------------------------------------
 
 test_that(".str_to_sentence_full capitalises the first letter", {
+  skip_if_not_installed("stringr")
   expect_equal(.str_to_sentence_full("hello world"), "Hello world.")
 })
 
 test_that(".str_to_sentence_full replaces underscores with spaces", {
+  skip_if_not_installed("stringr")
   expect_equal(.str_to_sentence_full("wind_speed_class"), "Wind speed class.")
 })
 
 test_that(".str_to_sentence_full does not double-add a trailing period", {
+  skip_if_not_installed("stringr")
   expect_equal(.str_to_sentence_full("hello world."), "Hello world.")
 })
 
 test_that(".str_to_sentence_full is vectorised", {
+  skip_if_not_installed("stringr")
   expect_equal(
     .str_to_sentence_full(c("foo_bar", "baz.")),
     c("Foo bar.", "Baz.")
@@ -159,6 +168,11 @@ test_that(".write_file_lines falls back to file.edit when usethis is unavailable
 # .write_dataset_dictionary() -------------------------------------------------
 
 test_that(".write_dataset_dictionary creates a file at the expected path", {
+  skip_if_not_installed("knitr")
+  skip_if_not_installed("purrr")
+  skip_if_not_installed("stringr")
+  skip_if_not_installed("tibble")
+  skip_if_not_installed("vctrs")
   tmp_dir <- withr::local_tempdir()
   df <- data.frame(x = 1L)
   .write_dataset_dictionary(
@@ -171,6 +185,11 @@ test_that(".write_dataset_dictionary creates a file at the expected path", {
 })
 
 test_that(".write_dataset_dictionary infers dataset_name from the call", {
+  skip_if_not_installed("knitr")
+  skip_if_not_installed("purrr")
+  skip_if_not_installed("stringr")
+  skip_if_not_installed("tibble")
+  skip_if_not_installed("vctrs")
   tmp_dir <- withr::local_tempdir()
   my_special_df <- data.frame(x = 1L)
   .write_dataset_dictionary(my_special_df, path = tmp_dir, open = FALSE)
@@ -178,6 +197,11 @@ test_that(".write_dataset_dictionary infers dataset_name from the call", {
 })
 
 test_that(".write_dataset_dictionary returns the file path invisibly", {
+  skip_if_not_installed("knitr")
+  skip_if_not_installed("purrr")
+  skip_if_not_installed("stringr")
+  skip_if_not_installed("tibble")
+  skip_if_not_installed("vctrs")
   tmp_dir <- withr::local_tempdir()
   df <- data.frame(x = 1L)
   result <- withVisible(
@@ -193,6 +217,11 @@ test_that(".write_dataset_dictionary returns the file path invisibly", {
 })
 
 test_that(".write_dataset_dictionary produces one row per column", {
+  skip_if_not_installed("knitr")
+  skip_if_not_installed("purrr")
+  skip_if_not_installed("stringr")
+  skip_if_not_installed("tibble")
+  skip_if_not_installed("vctrs")
   tmp_dir <- withr::local_tempdir()
   df <- data.frame(x = 1L, y = "a", z = TRUE)
   .write_dataset_dictionary(
@@ -207,6 +236,11 @@ test_that(".write_dataset_dictionary produces one row per column", {
 })
 
 test_that(".write_dataset_dictionary includes column names in the output", {
+  skip_if_not_installed("knitr")
+  skip_if_not_installed("purrr")
+  skip_if_not_installed("stringr")
+  skip_if_not_installed("tibble")
+  skip_if_not_installed("vctrs")
   tmp_dir <- withr::local_tempdir()
   df <- data.frame(wind_speed = 1.0, air_temp = 1.0)
   .write_dataset_dictionary(
@@ -224,6 +258,11 @@ test_that(".write_dataset_dictionary includes column names in the output", {
 })
 
 test_that(".write_dataset_dictionary uses .class_friendly for the class column", {
+  skip_if_not_installed("knitr")
+  skip_if_not_installed("purrr")
+  skip_if_not_installed("stringr")
+  skip_if_not_installed("tibble")
+  skip_if_not_installed("vctrs")
   tmp_dir <- withr::local_tempdir()
   df <- data.frame(x = 1L, y = factor("a"))
   .write_dataset_dictionary(
@@ -241,6 +280,11 @@ test_that(".write_dataset_dictionary uses .class_friendly for the class column",
 })
 
 test_that(".write_dataset_dictionary uses .str_to_sentence_full for descriptions", {
+  skip_if_not_installed("knitr")
+  skip_if_not_installed("purrr")
+  skip_if_not_installed("stringr")
+  skip_if_not_installed("tibble")
+  skip_if_not_installed("vctrs")
   tmp_dir <- withr::local_tempdir()
   df <- data.frame(wind_speed = 1.0)
   .write_dataset_dictionary(
