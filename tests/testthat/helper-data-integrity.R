@@ -1,6 +1,7 @@
 # Checks that every column_name in a dictionary exists in the dataset, and
 # that the actual class of each column matches the dictionary's class value.
 check_dictionary_integrity <- function(dataset, dictionary) {
+  default_dictionary <- datawrap::create_dataset_dictionary(dataset)
   for (i in seq_len(nrow(dictionary))) {
     col <- dictionary$column_name[[i]]
     expected_class <- dictionary$class[[i]]
@@ -9,7 +10,9 @@ check_dictionary_integrity <- function(dataset, dictionary) {
       label = paste0("column '", col, "' exists in dataset")
     )
     if (col %in% names(dataset)) {
-      actual_class <- datawrap::create_dataset_dictionary(dataset[col])$class
+      actual_class <- default_dictionary$class[
+        default_dictionary$column_name == col
+      ]
       expect_equal(
         actual_class,
         expected_class,
