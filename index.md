@@ -8,8 +8,8 @@ You can install the development version of seabirddata from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("jonthegeek/seabirddata")
+# install.packages("pak")
+pak::pak("jonthegeek/seabirddata")
 ```
 
 ## Usage
