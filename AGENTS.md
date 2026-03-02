@@ -1,28 +1,52 @@
 # AGENTS.md
 
-## Testing
+## Skills
 
-- Before starting any coding task, run the relevant tests and check coverage so you know the baseline state.
-- Always run `air format .` before running tests, after every R file edit.
-- Tests for `R/{name}.R` go in `tests/testthat/test-{name}.R`.
-- Use `devtools::test(reporter = "check")` to run all tests
-- Use `devtools::test(filter = "name", reporter = "check")` to run tests for `R/{name}.R`
-- All testing functions automatically load code; you don't need to.
-- All new code should have an accompanying test.
-- If there are existing tests, place new tests next to similar existing tests.
+Skills in @.github/skills should be loaded when the user triggers them.
 
-### Test coverage
+| Triggers              | Path                                           |
+------------------------|------------------------------------------------|
+| search / rewrite code | @.github/skills/search-code/SKILL.md           |
+| create github issues  | @.github/skills/create-issue/SKILL.md          |
 
-The goal is 100% file-level test coverage across all R source files. After editing a file, ensure that it still has 100% test coverage.
+## GitHub
 
-To check coverage for a single file:
+Use the `gh` CLI to interact with GitHub rather than fetching web URLs. Common examples:
 
-```r
-covr_res <- devtools:::test_coverage_active_file("R/file_name.R")
-which(purrr::map_int(covr_res, "value") == 0)
+```bash
+# View an issue
+gh issue view 123
+
+# List open issues
+gh issue list
+
+# View a pull request
+gh pr view 456
+
+# List open PRs
+gh pr list
 ```
 
-The following files are intentionally excluded from coverage requirements (no associated tests):
+### Commit message style
 
-- `R/seabirddata-package.R`
-- `R/data-*.R` (they will have data integrity tests, but not coverage)
+Use conventional commits with backtick-quoted function names. Close issues in the body with `- Closes #N`. Example:
+
+```
+feat: add `describe_dataset()`
+
+Generates a `@format` roxygen2 block for a dataset, suitable for use
+with `@eval` in package dataset documentation.
+
+- Closes #3
+```
+
+## Testing
+
+- Before starting any coding task, run all tests so you know the baseline state.
+- Always run `air format .` before running tests, after every R file edit.
+- This package is data-only. The only tests are in `tests/testthat/test-data-integrity.R`.
+- Helper function(s) are in `tests/testthat/helper-data-integrity.R`.
+- Use `devtools::test(reporter = "check")` to run all tests
+- All testing functions automatically load code; you don't need to.
+- All new code/data should have an accompanying test.
+- If there are existing tests, place new tests next to similar existing tests.

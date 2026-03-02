@@ -18,10 +18,10 @@ pkgload::load_all()
 
 # Run once to generate initial dictionary MD files. Edit descriptions in those
 # files; do not re-run unless column classes have changed.
-# .write_dataset_dictionary(beaufort_scale)
-# .write_dataset_dictionary(sea_states)
-# .write_dataset_dictionary(ships)
-# .write_dataset_dictionary(birds)
+# datawrap::write_dataset_dictionary(beaufort_scale)
+# datawrap::write_dataset_dictionary(sea_states)
+# datawrap::write_dataset_dictionary(ships)
+# datawrap::write_dataset_dictionary(birds)
 
 beaufort_scale_dictionary <- readMDTable::read_md_table(
   "data-raw/beaufort_scale_dictionary.md",

@@ -2,6 +2,5 @@
 "_PACKAGE"
 
 ## usethis namespace: start
-#' @importFrom rlang check_installed
 ## usethis namespace: end
 NULL

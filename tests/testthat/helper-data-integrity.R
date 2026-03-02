@@ -9,7 +9,7 @@ check_dictionary_integrity <- function(dataset, dictionary) {
       label = paste0("column '", col, "' exists in dataset")
     )
     if (col %in% names(dataset)) {
-      actual_class <- .class_friendly(dataset[[col]])
+      actual_class <- datawrap::create_dataset_dictionary(dataset[col])$class
       expect_equal(
         actual_class,
         expected_class,
