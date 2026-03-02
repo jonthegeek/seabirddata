@@ -4,7 +4,7 @@
 #' wind force scale, as used in [ships]. This table was constructed from the
 #' data dictionary accompanying the source dataset.
 #'
-#' @eval .describe_dataset(beaufort_scale, beaufort_scale_dictionary)
+#' @eval datawrap::describe_dataset(beaufort_scale, beaufort_scale_dictionary)
 #'
 #' @seealso [ships], where `wind_speed_class` references this table. The script
 #'   used to prepare this dataset:

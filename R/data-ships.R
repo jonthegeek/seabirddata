@@ -11,7 +11,7 @@
 #' grid cell centre coordinates (derivable from `latitude` and `longitude`), and
 #' sea surface salinity (missing for all but one entry).
 #'
-#' @eval .describe_dataset(ships, ships_dictionary)
+#' @eval datawrap::describe_dataset(ships, ships_dictionary)
 #'
 #' @seealso [birds] for the corresponding bird observation records. [sea_states]
 #'   and [beaufort_scale] for lookup tables describing the `sea_state_class` and

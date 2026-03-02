@@ -1,7 +1,7 @@
 # beaufort_scale --------------------------------------------------------------
 
 test_that("beaufort_scale columns match beaufort_scale_dictionary", {
-  skip_if_not_installed("vctrs")
+  skip_if_not_installed("datawrap")
   check_dictionary_integrity(beaufort_scale, beaufort_scale_dictionary)
 })
 
@@ -12,7 +12,7 @@ test_that("beaufort_scale has the expected number of columns", {
 # sea_states ------------------------------------------------------------------
 
 test_that("sea_states columns match sea_states_dictionary", {
-  skip_if_not_installed("vctrs")
+  skip_if_not_installed("datawrap")
   check_dictionary_integrity(sea_states, sea_states_dictionary)
 })
 
@@ -23,7 +23,7 @@ test_that("sea_states has the expected number of columns", {
 # ships -----------------------------------------------------------------------
 
 test_that("ships columns match ships_dictionary", {
-  skip_if_not_installed("vctrs")
+  skip_if_not_installed("datawrap")
   check_dictionary_integrity(ships, ships_dictionary)
 })
 
@@ -34,7 +34,7 @@ test_that("ships has the expected number of columns", {
 # birds -----------------------------------------------------------------------
 
 test_that("birds columns match birds_dictionary", {
-  skip_if_not_installed("vctrs")
+  skip_if_not_installed("datawrap")
   check_dictionary_integrity(birds, birds_dictionary)
 })
 

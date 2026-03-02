@@ -4,7 +4,7 @@
 #' This table was constructed from the data dictionary accompanying the source
 #' dataset.
 #'
-#' @eval .describe_dataset(sea_states, sea_states_dictionary)
+#' @eval datawrap::describe_dataset(sea_states, sea_states_dictionary)
 #'
 #' @seealso [ships], where `sea_state_class` references this table. The script
 #'   used to prepare this dataset:

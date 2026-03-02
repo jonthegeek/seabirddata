@@ -23,7 +23,7 @@
 #' indicates the occurrence was unknown or unrecorded (original value `"U"` in
 #' the source data).
 #'
-#' @eval .describe_dataset(birds, birds_dictionary)
+#' @eval datawrap::describe_dataset(birds, birds_dictionary)
 #'
 #' @seealso [ships] for the corresponding ship and environmental records. The
 #'   script used to prepare this dataset:
