@@ -46,7 +46,7 @@ usethis::use_data(
   ships_dictionary,
   birds_dictionary,
   overwrite = TRUE,
-  compress = "bzip2"
+  compress = "gzip"
 )
 
 # tools::resaveRdaFiles("data/")
