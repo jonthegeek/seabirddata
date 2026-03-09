@@ -44,9 +44,14 @@ test_that("birds has the expected number of columns", {
 
 # Referential integrity -------------------------------------------------------
 
-test_that("birds$record_id matches ships$record_id except for one known orphan", {
-  # record_id 1184009 (bird_observation_id 974) has no corresponding ship
-  # record in the source data; this is a known data quality issue.
-  orphaned <- birds$record_id[!birds$record_id %in% ships$record_id]
-  expect_equal(sort(orphaned), 1184009L)
+test_that("birds$record_id and ships$record_id contain the same values (#5)", {
+  expect_setequal(birds$record_id, ships$record_id)
+})
+
+test_that("ships$wind_speed_class values are in beaufort_scale$wind_speed_class", {
+  expect_in(na.omit(ships$wind_speed_class), beaufort_scale$wind_speed_class)
+})
+
+test_that("ships$sea_state_class values are in sea_states$sea_state_class", {
+  expect_in(na.omit(ships$sea_state_class), sea_states$sea_state_class)
 })

@@ -49,6 +49,12 @@ birds <- birds_raw |>
       ),
       as.integer
     ),
+    # One bird has a typo for the ID. I've verified that the date shown is out
+    # of place in the dataset, and the corresponding ID in ships was orphaned.
+    record_id = dplyr::replace_values(
+      .data$record_id,
+      1184009L ~ 1104009L
+    ),
     # [NO BIRDS RECORDED] is the source data's sentinel for a census period
     # with no observations in species_common_name
     species_common_name = dplyr::na_if(
